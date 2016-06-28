@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title><%= title %></title>
+	<meta charset='utf-8'>
+</head>
+<body>
+	<h1><%= title %></h1>
+	<form id="joinForm" action="/insert" method="post">
+		<table width="350" border="1">
+			<tr>
+				<th>아이디</th>
+				<td><input type="text" name="user_id" id="id" size="12" maxLength="12"></td>
+			</tr>
+			<tr>
+				<th>비밀번호</th>
+				<td><input type="password" name="user_passwd" id="user_passwd" size="12" maxLength="12"></td>
+			</tr>
+			<tr>
+				<th>이름</th>
+				<td><input type="text" name="user_name" id="user_name" size="10" maxLength="10"></td>
+			</tr>
+			<tr>
+				<th>이메일</th>
+				<td><input type="email" name="user_email" id="user_email" size="30" maxLength="50"></td>
+			</tr>
+			<tr>
+				<th>전화번호</th>
+				<td>
+					<select name="tel1" id="tel1">
+						<option value="010">010</option>
+						<option value="011">011</option>
+						<option value="016">016</option>
+						<option value="017">017</option>
+						<option value="018">018</option>
+						<option value="019">019</option>
+					</select>
+					-
+					<input type="text" name="tel2" id="tel2" size="4" maxLength="4">
+					-
+					<input type="text" name="tel3" id="tel3" size="4" maxLength="4">
+				</td>
+			</tr>
+			<tr>
+				<th>주소</th>
+				<td><input type="text" id="user_address" size="30" maxLength="50"></td>
+			</tr>
+			<tr>
+				<th>직업</th>
+				<td><select name="user_job" id="user_job">
+					<option value="학생">학생</option>
+					<option value="직장인">직장인</option>
+					<option value="주부">주부</option>
+				</select></td>
+			</tr>
+			<tr>
+				<th>성별</th>
+				<td>
+					<input type="radio" name="user_gender" value="남" checked="checked">남
+					<input type="radio" name="user_gender" value="여">여
+				</td>
+			</tr>
+			<tr>
+				<th>생일</th>
+				<td><input type="text" name="user_birth" id="user_birth" size="8" maxLength="8" placeholder="1991.04.13"></td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<input type="submit" id="btnJoin" name="join" value="가입">
+					<input type="reset" name="cancel"value="취소">
+				</td>
+			</tr>
+		</table>
+	</form>
+
+
+</body>
+</html>
